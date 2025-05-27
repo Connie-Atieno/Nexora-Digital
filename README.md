@@ -23,4 +23,4 @@ A modern, responsive website for Nexora Digital, showcasing web development and 
 
 ## Contact
 
-For any inquiries, please contact info@nexoradigital.com 
+For any inquiries, please contact info@nexoradigital.com
