@@ -4,21 +4,35 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 
 const app = express();
+
+// Enable CORS for all routes
 app.use(cors());
-app.use(bodyParser.urlencoded({ extended: false }));
+
+// Parse URL-encoded bodies (as sent by HTML forms)
+app.use(bodyParser.urlencoded({ extended: true }));
+
+// Parse JSON bodies (as sent by API clients)
 app.use(bodyParser.json());
 
 // Serve static files from the current directory
 app.use(express.static('./'));
 
+// Debug middleware to log all requests
+app.use((req, res, next) => {
+  console.log(`${req.method} ${req.url}`);
+  next();
+});
+
 app.post('/contact', (req, res) => {
+  console.log('Received contact form submission:', req.body);
+  
   const { name, email, message } = req.body;
 
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
       user: 'atieno46@gmail.com',
-      pass: 'twojjldofkkbmhbv' // IMPORTANT: Use a Gmail app password, not your actual Gmail password!
+      pass: 'your-app-password-here' // IMPORTANT: Use a Gmail app password, not your actual Gmail password!
     }
   });
 
@@ -38,6 +52,11 @@ app.post('/contact', (req, res) => {
       return res.status(200).send('Message received!');
     }
   });
+});
+
+// Add a test route
+app.get('/test', (req, res) => {
+  res.send('Server is working!');
 });
 
 app.listen(3000, () => {
