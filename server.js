@@ -32,7 +32,7 @@ app.post('/contact', (req, res) => {
     service: 'gmail',
     auth: {
       user: 'atieno46@gmail.com',
-      pass: 'your-app-password-here' // IMPORTANT: Use a Gmail app password, not your actual Gmail password!
+      pass: 'twojjldofkkbmhbv'  // Your Gmail app password
     }
   });
 
@@ -46,10 +46,17 @@ app.post('/contact', (req, res) => {
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
       console.error('Error sending email:', error);
-      return res.status(500).send('Error sending message');
+      return res.status(500).json({ 
+        success: false, 
+        message: 'Error sending message',
+        error: error.message 
+      });
     } else {
       console.log('Email sent:', info.response);
-      return res.status(200).send('Message received!');
+      return res.status(200).json({ 
+        success: true, 
+        message: 'Message sent successfully!' 
+      });
     }
   });
 });
