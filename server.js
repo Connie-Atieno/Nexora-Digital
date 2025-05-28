@@ -18,7 +18,7 @@ app.post('/contact', (req, res) => {
     service: 'gmail',
     auth: {
       user: 'atieno46@gmail.com',
-      pass: 'your-app-password-here' // IMPORTANT: Use a Gmail app password, not your actual Gmail password!
+      pass: 'twojjldofkkbmhbv' // IMPORTANT: Use a Gmail app password, not your actual Gmail password!
     }
   });
 
