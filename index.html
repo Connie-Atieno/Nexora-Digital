@@ -6,6 +6,8 @@
   <title>Nexora Digital</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
 <body>
   <header>
@@ -29,7 +31,30 @@
   <section class="about" id="about">
     <h2>About Us</h2>
     <p>Nexora Digital is a forward-thinking web development company blending full-stack expertise, AI innovation, and modern technologies to empower businesses, governments, and individuals alike. With over 3 years of experience, we bring visions to life through smart, scalable, and human-centered digital solutions.</p>
+
   </section>
+<section id="testimonials">
+  <h2>What Our Clients Say</h2>
+  <blockquote>"Nexora Digital transformed our outdated site into a modern platform. Super responsive and talented!" – GovTech Kenya</blockquote>
+  <blockquote>"Working with Nexora was seamless. From design to deployment, they nailed it." – ShopFlow CEO</blockquote>
+</section>
+
+<section id="faq">
+  <h2>FAQ</h2>
+  <details>
+    <summary>What industries do you serve?</summary>
+    <p>We work with governments, startups, NGOs, and local businesses.</p>
+  </details>
+  <details>
+    <summary>How long does a typical project take?</summary>
+    <p>2–4 weeks depending on scope.</p>
+  </details>
+  <details>
+    <summary>Can you integrate AI into our system?</summary>
+    <p>Yes! We specialize in OpenAI-powered bots, automation, and smart forms.</p>
+  </details>
+</section>
+
 
   <section class="services" id="services">
     <h2>Our Services</h2>
@@ -53,6 +78,37 @@
     </ul>
   </section>
 
+  <section id="portfolio" class="portfolio">
+    <h2>Case Studies</h2>
+    <div class="case">
+      <h3>🌐 GovSite</h3>
+      <p>Redesigned a secure government portal using React and Node.js. Resulted in 40% faster access and increased citizen engagement.</p>
+    </div>
+    <div class="case">
+      <h3>🛒 ShopFlow</h3>
+      <p>Built an e-commerce platform with Stripe integration for a fashion brand. Handled 10K+ transactions monthly.</p>
+    </div>
+    <div class="case">
+      <h3>🤖 HelpAI</h3>
+      <p>Developed a GPT-powered customer support bot for SMEs. Reduced email volume by 60%.</p>
+    </div>
+    <div class="case" data-aos="fade-up">
+      ...
+    </div>
+    
+  </section>
+
+  <section id="blog" class="blog">
+    <h2>Insights & Blog</h2>
+    <div class="post">
+      <h3>🚀 Building Smart Web Solutions for Every Sector</h3>
+      <p>At Nexora, we don’t just code — we create experiences. Here’s how we use tech to scale government systems and small businesses alike...</p>
+      <a href="blog.html">Read More</a>
+    </div>
+  </section>
+  
+  
+
   <section class="contact" id="contact">
     <h2>Contact Us</h2>
     <form action="http://localhost:3000/contact" method="POST" id="contactForm">
@@ -72,5 +128,8 @@
   <footer>
     <p>&copy; 2025 Nexora Digital. All rights reserved.</p>
   </footer>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
+
 </body>
 </html>
