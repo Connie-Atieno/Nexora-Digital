@@ -10,7 +10,7 @@ sendBtn.addEventListener('click', async () => {
   chatInput.value = '';
 
   try {
-    const response = await fetch('https://nexora-chatbot.onrender.com/api/chat', {
+    const response = await fetch('https://nexora-bot-0a6h.onrender.com/api/chat', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ message: userMessage })
