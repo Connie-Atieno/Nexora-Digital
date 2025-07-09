@@ -2,13 +2,119 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Nexora Digital</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f5f7fa;
+      color: #2d2d2d;
+    }
 
+    header {
+      background-color: #1e1f26;
+      color: white;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 2rem;
+    }
+
+    nav div {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.8rem;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 3rem 2rem;
+    }
+
+    .hero h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.5rem;
+      margin: 0;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+    }
+
+    .hero a {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #4bc0c8;
+      color: white;
+      text-decoration: none;
+      border-radius: 0.5rem;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 3rem 2rem;
+    }
+
+    .services, .about, .contact, .portfolio {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    footer {
+      background-color: #1e1f26;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      section {
+        padding: 2rem 1rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
   <header>
     <nav>
@@ -20,116 +126,56 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-    <img src="Logo.png" alt="Nexora Digital Logo" class="logo" />
     <div class="hero">
       <h1>Nexora Digital</h1>
-      <p>Engineering Tomorrow's Web Today</p>
+      <p>Engineering Tomorrow’s Web Today</p>
       <a href="#contact">Start Your Project</a>
     </div>
   </header>
 
   <section class="about" id="about">
     <h2>About Us</h2>
-    <p>Nexora Digital is a forward-thinking web development company blending full-stack expertise, AI innovation, and modern technologies to empower businesses, governments, and individuals alike. With over 3 years of experience, we bring visions to life through smart, scalable, and human-centered digital solutions.</p>
-
+    <p>Nexora Digital is a full-stack web and AI consultancy empowering businesses, governments, and personal brands through cutting-edge tech and human-centered digital design.</p>
   </section>
-<section id="testimonials">
-  <h2>What Our Clients Say</h2>
-  <blockquote>"Nexora Digital transformed our outdated site into a modern platform. Super responsive and talented!" – GovTech Kenya</blockquote>
-  <blockquote>"Working with Nexora was seamless. From design to deployment, they nailed it." – ShopFlow CEO</blockquote>
-</section>
-
-<section id="faq">
-  <h2>FAQ</h2>
-  <details>
-    <summary>What industries do you serve?</summary>
-    <p>We work with governments, startups, NGOs, and local businesses.</p>
-  </details>
-  <details>
-    <summary>How long does a typical project take?</summary>
-    <p>2–4 weeks depending on scope.</p>
-  </details>
-  <details>
-    <summary>Can you integrate AI into our system?</summary>
-    <p>Yes! We specialize in OpenAI-powered bots, automation, and smart forms.</p>
-  </details>
-</section>
-
 
   <section class="services" id="services">
     <h2>Our Services</h2>
     <ul>
-      <li>Full-Stack Web Development</li>
-      <li>AI-Powered Applications (Chatbots, Automation, OpenAI Integrations)</li>
-      <li>Custom API & System Integrations</li>
-      <li>E-commerce Platforms & Solutions</li>
-      <li>Cloud & DevOps (AWS, Vercel, Netlify)</li>
-      <li>Digital Transformation Consulting</li>
+      <li>Web & App Development</li>
+      <li>AI Chatbot Integration</li>
+      <li>Custom APIs & Automation</li>
+      <li>Government & Social Projects</li>
+      <li>Digital Strategy & Consulting</li>
     </ul>
   </section>
 
   <section class="portfolio" id="portfolio">
-    <h2>Our Work</h2>
-    <p>Check out some of our recent projects below.</p>
+    <h2>Portfolio</h2>
     <ul>
-      <li><strong>GovSite:</strong> A fast, secure government portal (React + Node.js)</li>
-      <li><strong>ShopFlow:</strong> Custom e-commerce store (Next.js + Stripe)</li>
-      <li><strong>HelpAI:</strong> OpenAI chatbot for a support company (Python + LangChain)</li>
+      <li>GovConnect – Government services portal (React + Node)</li>
+      <li>ShopVerse – Full-stack e-commerce app (Next.js + Stripe)</li>
+      <li>NexoraBot – AI chatbot solution for startups (Python + Langchain)</li>
     </ul>
   </section>
 
-  <section id="portfolio" class="portfolio">
-    <h2>Case Studies</h2>
-    <div class="case">
-      <h3>🌐 GovSite</h3>
-      <p>Redesigned a secure government portal using React and Node.js. Resulted in 40% faster access and increased citizen engagement.</p>
-    </div>
-    <div class="case">
-      <h3>🛒 ShopFlow</h3>
-      <p>Built an e-commerce platform with Stripe integration for a fashion brand. Handled 10K+ transactions monthly.</p>
-    </div>
-    <div class="case">
-      <h3>🤖 HelpAI</h3>
-      <p>Developed a GPT-powered customer support bot for SMEs. Reduced email volume by 60%.</p>
-    </div>
-    <div class="case" data-aos="fade-up">
-      ...
-    </div>
-    
-  </section>
-
-  <section id="blog" class="blog">
-    <h2>Insights & Blog</h2>
-    <div class="post">
-      <h3>🚀 Building Smart Web Solutions for Every Sector</h3>
-      <p>At Nexora, we don’t just code — we create experiences. Here’s how we use tech to scale government systems and small businesses alike...</p>
-      <a href="blog.html">Read More</a>
-    </div>
-  </section>
-  
-  
-
   <section class="contact" id="contact">
     <h2>Contact Us</h2>
-    <form action="http://localhost:3000/contact" method="POST" id="contactForm">
-      <label for="name">Name:</label><br />
-      <input type="text" id="name" name="name" required /><br /><br />
-      
-      <label for="email">Email:</label><br />
-      <input type="email" id="email" name="email" required /><br /><br />
-      
-      <label for="message">Message:</label><br />
-      <textarea id="message" name="message" rows="5" required></textarea><br /><br />
-      
-      <button type="submit">Send Message</button>
-    </form>
+    <p>Email: nexoradigital.ke@gmail.com</p>
+    <p>Location: Nairobi, Kenya</p>
   </section>
 
   <footer>
     <p>&copy; 2025 Nexora Digital. All rights reserved.</p>
   </footer>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>AOS.init();</script>
 
+  <!-- 🧠 NexoraBot Chat UI -->
+  <div id="chat-container" style="position: fixed; bottom: 20px; right: 20px; width: 300px; background: #fff; border-radius: 10px; padding: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.2); z-index: 999;">
+    <div id="chat-box" style="height: 200px; overflow-y: auto; margin-bottom: 10px;"></div>
+    <input id="chat-input" type="text" placeholder="Ask Nexora..." style="width: 70%;" />
+    <button id="send-btn" style="width: 25%; background: #4BC0C8; color: white; border: none;">Send</button>
+  </div>
+
+  <!-- Chatbot script -->
+  <script src="chatbot.js"></script>
 </body>
 </html>
